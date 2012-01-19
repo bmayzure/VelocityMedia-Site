@@ -1,0 +1,263 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Screen layout for YAML examples
+ * (de) Bildschirmlayout für YAML-Beispiele
+ *
+ * @copyright       Copyright 2005-2011, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3.1
+ * @revision        $Revision: 501 $
+ * @lastmodified    $Date: 2011-06-18 17:27:44 +0200 (Sa, 18 Jun 2011) $
+ */
+
+@media screen, projection
+{
+  /** 
+   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera 
+   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera 
+   *
+   * @workaround
+   * @affected IE8, FF, Webkit, Opera
+   * @css-for all
+   * @valid CSS3
+   */
+
+  body { overflow-y: scroll; }
+
+  /*------------------------------------------------------------------------------------------------------*/
+  
+  /**
+   * (en) Formatting YAML's  basic layout elements
+   * (de) Gestaltung des YAML Basis-Layouts
+   */
+
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */
+  body { background: #888; }
+
+  /* (en) Centering layout in old IE-versions */
+  /* (de) Zentrierung des Layouts in alten IE-versionen */
+  body { text-align: center; }
+  .page_margins { text-align:left; margin: 0 auto; }
+
+  /* (en) Layout: width, background, borders */
+  /* (de) Layout: Breite, Hintergrund, Rahmen */
+  .page_margins { max-width: 80em; }
+  .page { margin: 0 20px; }
+  #header, #feature, #nav, #main, #extended, #footer { overflow:hidden; min-width: 720px; }
+
+  /* (en) Designing main layout elements */
+  /* (de) Gestaltung der Hauptelemente des Layouts */
+  #header {
+	background: #444 url(../../img/bg_header.png) repeat-x left top;
+	color: #ccc;
+  }
+  #footer {
+	background: #444 url(../../img/bg_footer.png) repeat-x left top;
+	color: #CCC;
+  }
+  #header .page { text-align:left; padding: 5px 0; }
+  #header span.navlinks {
+	float:right;
+	padding-top: 25px;
+}
+
+  #feature {
+	color: #fff;
+	background: #6F1700 url(../../img/bg_red.png) repeat-x left bottom;
+  }
+
+  #feature .page {
+	position:relative;
+	padding: 20px 0px;
+	height: 400px;
+  }
+
+  #feature h1 {
+	color: #fff !important;
+	text-shadow: 1px 1px 4px #000;
+	-moz-text-shadow: 1px 1px 4px #000;
+	-webkit-text-shadow: 1px 1px 4px #000;
+  }
+
+  #nav {
+	background: #888 url(../../img/bg_nav.png) repeat-x left top;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-top:10px;
+	border-top: 2px solid #666;
+  }
+
+  #main { background: #fff;  }
+
+  #main .c25r { border-left: 1px dotted #88a; }
+
+  #extended { background: #ddd; }
+  #extended .c25l,  #extended .c50l { border-right: 1px dotted #88a; }
+
+  #extended .subc  { padding: 0 10px; }
+  #extended .subcl { padding: 0 10px 0 0; }
+  #extended .subcr { padding: 0 0 0 10px; }
+
+  #main, #extended { padding-top: 20px; padding-bottom: 20px; }
+
+  #footer { border-top: 2px #666 solid; }
+  #footer .page { padding: 10px 0px; }
+
+ /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * (en) Modifying "shiny buttons" navigation
+  * (en) Anpassung der "Shiny Buttons" Navigation
+  */
+
+  .hlist { background: transparent; border: 0 none; }
+  .hlist ul { margin-left: 0; border: 0 none; width: 100%; }
+  .hlist ul li {
+	line-height: 1.2em;
+	display:block;
+	width: 15%;
+	border:0;
+	padding: 0;
+}
+  .hlist ul li.last { margin-left: -5px; float:right; border-right: 1px #ccc solid;}
+
+  .hlist ul li a,
+  .hlist ul li strong {  width:auto; display:block; border-left: 1px #ccc solid; color: #000; font-weight: normal; margin: 0 5px 0 0; padding: 0.5em 0 0.5em 0.5em; }
+
+  .hlist ul li a span {
+	display:block;
+	color: #CCC;
+}
+  .hlist ul li strong span {
+	display:block;
+	color: #CCC;
+}
+
+  .hlist ul li a:focus,
+  .hlist ul li a:hover,
+  .hlist ul li a:active {
+	background: #787878 url(../../img/bg_nav_hover.png) repeat-x left top;
+	color: #fff;
+}
+
+  .hlist ul li.active { background:transparent; border: 0 none; }
+  .hlist ul li.active strong {
+	background: #6E1600 url(../../img/bg_nav_current.png) repeat-x left top;
+	color: #fff;
+	font-weight: bold;
+}
+
+ /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * (en) Styling of layout specific elements
+  * (de) Gestaltung layoutabhängiger Elemente
+  */
+
+  #feature h1 {
+    font-weight:bold;
+    font-size:2.5em;
+    letter-spacing:-2px;
+    line-height:105%;
+    color:#000;
+  }
+
+  #feature span { color:#000; }
+
+  #header a { color: #fff; font-weight: normal; background:transparent; text-decoration:none; }
+  #header a:focus,
+  #header a:hover,
+  #header a:active { text-decoration:underline; background-color: transparent; }
+
+  #footer a { 
+  	color: #ccc; 
+	background:transparent; 
+	font-weight: bold; 
+	text-shadow: -1px -1px 0px #000; 
+	-moz-text-shadow: -1px -1px 0px #000; 
+	-webkit-text-shadow: -1px -1px 0px #000; 
+  }
+  #footer a:focus,
+  #footer a:hover,
+  #footer a:active { color:#eee; background-color: transparent; text-decoration:underline; }
+
+ /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * Skiplinks 
+  *
+  * (en) Visual styling for skiplink navigation
+  * (de) Visuelle Gestaltung der Skiplink-Navigation
+  *
+  * @section content-skiplinks
+  */
+  
+  #skiplinks a.skip:focus,
+  #skiplinks a.skip:active { 
+	color: #fff; 
+	background: #333; 
+	border-bottom: 1px #000 solid;
+	padding: 10px 0;
+	text-decoration:none;
+  }
+
+  /*--- Infinite Carousel ---------------------------------------------------------------------------- */
+
+  #carouselContainer {
+	width: 700px;
+	height: 404px;
+	background: transparent;
+	margin-bottom: 10px;
+  }
+
+  #carousel {
+	border: 0px solid #aaa;
+	width: 650px;
+	height: 400px;
+	padding: 0px;
+	text-align: left;
+  }
+
+  #carousel ul, #carousel ol, #carousel dl { margin:0; }
+
+  #carousel li { margin-left:0; }
+
+  #carousel img {
+	border:none;
+	padding: 0px 0px 0px -24px;
+  }
+
+  #carousel a:link, #carousel a:visited {
+	color: #FFFF33;
+	border-bottom: 1px dotted #FFFF33;
+	text-decoration: none;
+  }
+  
+  #carousel a:active, #carousel a:focus, #carousel a:hover {
+	color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	text-decoration: none;
+  }
+  
+  .textholder { padding: 2px 12px 0;  }
+  
+  .textholder .head {
+	font-family:"Nobile", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 1.6em;
+	color: #FFFFFF;
+  }
+
+  .textholder .text {
+	font-family:"Nobile", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #FFFFFF;
+  }
+  
+
+}
