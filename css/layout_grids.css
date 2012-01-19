@@ -28,3 +28,6 @@
 
 /* import print layout */
 @import url(../yaml/print/print_draft.css);
+
+/* import lettering.js CSS sheet */
+@import url(screen/lettering.css);
